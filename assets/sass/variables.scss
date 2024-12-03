@@ -1,0 +1,219 @@
+/* Theme default */
+  
+$font-family:  "Open Sans", sans-serif;
+$font-family-base:  "Open Sans", sans-serif;
+$font-family-button:  "Open Sans", sans-serif;
+$color-white: #fff;
+$color-black: #090F1E;
+$color-yellow: #FFC903;
+$color-red: #F68B98;
+$background-color: #090F1E;
+$color-orange: #030303;
+$color-brown: #7A7050;
+$color-red: #CA1919;
+$color-blue: #02B6FF;
+
+
+
+//font size default
+
+$font-size-h1:  50px; 
+$font-size-h2:  32px; 
+$font-size-h3:  20px; 
+$font-size-h4:  23px; 
+$font-size-h5:  18px;
+$font-size-h6:  14px; 
+
+body, p {
+	font-family: $font-family;
+	font-size: 18px;
+	line-height: 28px;
+	font-weight: 400;
+	font-style: normal;
+}
+
+h1,
+.h1 {
+  font-family: $font-family-base;
+  font-size: $font-size-h1;
+  line-height: 1.36;
+  font-weight: 800;
+  font-style: italic;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+h2,
+.h2 {
+  font-family: $font-family-base;
+  font-size: $font-size-h2;
+  line-height: 1.36;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 22px;
+}
+
+h3,
+.h3 {
+  font-family: $font-family-base;
+  font-size: $font-size-h3;
+  line-height: 50px;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 2px;
+}
+
+h4,
+.h4 {
+  font-family: $font-family-base;
+  font-size: $font-size-h4;
+  line-height: 40px;
+  font-weight: 900;
+  font-style: normal;
+}
+
+h5,
+.h5 {
+  font-family: $font-family-base;
+  font-size: $font-size-h5;
+  line-height: 1.36;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 4px;
+}
+
+h6,
+.h6 {
+  font-family: $font-family-button;
+  font-size: $font-size-h6;
+  line-height: 28px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@media (max-width: 1024px) {
+	h1, .h1 {
+		font-size: calc(#{$font-size-h1} * 0.9);
+	}
+}
+
+@media (max-width: 450px) {
+	h1, .h1 {
+		font-size: calc(#{$font-size-h1} * 0.65);
+	}
+}
+
+// Links
+// -------------------------
+a {
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: $color-black;
+  a {
+    transition: .3s all ease;
+  }
+}
+a {
+	transition: .3s all ease;
+	color: $color-black;
+	&:hover{
+		color: $color-brown;
+	}
+}
+
+// Helpers
+// -------------------------
+
+.invert {
+	b, p, a, li,
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+	  color: $color-white;
+	}
+}
+
+@media (min-width: 1400px) {
+	.container {
+		max-width: 1220px;
+	}
+}
+
+input,
+select{
+	outline: none;
+}
+// Primary Button
+// -------------------------
+.secondary-btn,
+.primary-btn{
+	display: inline-block;
+	position: relative;
+	padding: 16px 29px;
+	border-radius: 4px;
+	box-shadow: 0px 6px 34px 0px #3E8AF5CC;
+	background: linear-gradient(96.2deg, #7C5FEB 19.37%, #02B6FF 84.46%);
+	color: $color-white;
+	border: 0;
+	transition: .3s all ease;
+	font-family: $font-family-button;
+	font-size: $font-size-h5;
+	font-weight: 700;
+	&:hover{
+		background: linear-gradient(96.2deg, #02B6FF 19.37%, #7C5FEB 84.46%);
+		color: $color-white;
+		text-decoration: none;
+	}
+	&:active,
+	&:focus{
+		background: linear-gradient(96.2deg, #02B6FF 19.37%, #7C5FEB 84.46%);
+		color: $color-white;
+	}
+	&:disabled,
+	&[disabled]{
+		opacity: 0.5;
+	}
+	svg{
+		transition: .3s all ease;
+		fill: $color-white;
+		margin-right: 7px;
+	}
+}
+
+.secondary-btn{
+	border: 1px solid $color-white;
+	background: transparent;
+	&:hover{
+		background: $color-white;
+		color: $color-blue;
+	}
+	&:active,
+	&:focus{
+		background: $color-white;
+		color: $color-blue;
+	}
+}
+@media (max-width: 600px) {
+	.fullwidth{
+		width: 100%;
+		text-align: center;
+	}
+}
